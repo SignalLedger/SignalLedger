@@ -1,0 +1,58 @@
+flowchart TD
+    A[Primary Sources] --> A1[SEC EDGAR filings]
+    A --> A2[Investor relations releases]
+    A --> A3[Earnings transcripts]
+    A --> A4[Macro and regulatory calendars]
+
+    A1 --> B[Ingestion Layer]
+    A2 --> B
+    A3 --> B
+    A4 --> B
+
+    B --> C[Normalization]
+    C --> C1[entity resolution]
+    C --> C2[event type tagging]
+    C --> C3[timestamping]
+    C --> C4[raw text archive]
+
+    C1 --> D[Signal Engine]
+    C2 --> D
+    C3 --> D
+    C4 --> D
+
+    D --> D1[novelty score]
+    D --> D2[direction score]
+    D --> D3[magnitude estimate]
+    D --> D4[confidence score]
+
+    D1 --> E[Research and Ranking]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+
+    E --> E1[event studies]
+    E --> E2[backtests]
+    E --> E3[feature attribution]
+    E --> E4[paper portfolio]
+
+    E1 --> F[Risk and Execution]
+    E2 --> F
+    E3 --> F
+    E4 --> F
+
+    F --> F1[position sizing]
+    F --> F2[slippage and fees]
+    F --> F3[max drawdown limits]
+    F --> F4[kill switches]
+
+    F1 --> G[PnL and Review]
+    F2 --> G
+    F3 --> G
+    F4 --> G
+
+    G --> G1[net returns after costs]
+    G --> G2[hit rate and drawdown]
+    G --> G3[source level alpha]
+    G --> G4[trade journal and iteration]
+
+    G4 --> A
