@@ -6,3 +6,14 @@
 *.p12
 *.pfx
 secrets.*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Local tooling
+.DS_Store
