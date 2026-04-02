@@ -13,6 +13,19 @@ The project is designed to ingest machine-readable market catalysts, convert the
 - runs event studies, backtests, and paper portfolios before any live deployment
 - enforces risk controls so research PnL is not confused with deployable profit
 
+## Why It Has a Competitive Advantage
+
+SignalLedger is designed to compete on process quality rather than on vague claims of having a magic prediction model.
+
+- It starts with primary sources instead of delayed commentary. SEC filings, investor relations releases, transcripts, and regulatory documents often contain market-moving information before that information is fully summarized by financial media.
+- It converts raw documents into a structured event ledger. That creates a reusable history of what happened, when it happened, and how the market reacted, which is more defensible than a one-off sentiment score.
+- It measures signal quality with timestamps, validation, and attribution. Many hobby trading bots stop at prediction; SignalLedger is built to test whether the signal survives latency, slippage, spread, and changing market regimes.
+- It focuses on event types where speed and structure matter. A system that consistently detects offerings, guidance changes, executive departures, or regulatory actions can outperform slower discretionary workflows.
+- It treats risk control as part of the edge. A weaker raw signal with disciplined sizing and deployment rules can outperform a stronger-looking signal that ignores execution reality.
+- It can improve over time as coverage expands. Every new source adapter, normalized event type, and post-trade review makes the system more useful without changing the core architecture.
+
+The intended edge is not secret information. The intended edge is faster ingestion, better structuring, tighter validation, and more disciplined execution on public or properly licensed information.
+
 ## Workflow
 
 Core workflow:
